@@ -29,7 +29,7 @@ go build -buildmode=plugin -o ckafka_input.so ckafka_input.go
 ```yaml
 inputs:
     - '/path/go/ckafka_input.so': 
-          topoc:
+          topic:
             topicName: 5
             "^[a-z].*topic": 1 # 只要是以"^"开头的topic，一律为正则匹配
           codec: json
