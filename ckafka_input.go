@@ -18,7 +18,7 @@ type CkafkaInput struct {
 	consumers []*kafka.Consumer
 }
 
-func (l *MethodLibrary) New(config map[interface{}]interface{}) interface{} {
+func New(config map[interface{}]interface{}) interface{} {
 	var (
 		codertype      string = "plain"
 		decorateEvents        = false
