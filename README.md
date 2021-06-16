@@ -6,7 +6,7 @@
 
 支持原有 inputs kafka 大部分参数,包括sasl，并添加了 kafka topic patterns
 ### 支持的kafka对应参数
-    参考: https://github.com/edenhill/librdkafka/blob/master/CONFIGURATION.md 
+参考: https://github.com/edenhill/librdkafka/blob/master/CONFIGURATION.md 
 
 - TLS 全部
 
