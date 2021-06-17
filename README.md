@@ -33,9 +33,10 @@ inputs:
           consumer_settings:
             bootstrap.servers: '127.0.0.1:8080'
             group.id: groupId
-            client.id: csw134s
+            client.id: gohangout
             auto.commit.interval.ms: '1000'
-            auto.commit: 'true'
+            enable.auto.commit: true
+            auto.offset.reset: "earliest"
 outputs:
     - Stdout: {}
 ```
@@ -53,10 +54,10 @@ inputs:
           consumer_settings:
             bootstrap.servers: '127.0.0.1:8080'
             group.id: groupId
-            client.id: csw134s
+            client.id: gohangout
             auto.commit.interval.ms: '1000'
-            auto.commit: 'true'
-            version: '0.9.0.0'
+            enable.auto.commit: true
+
 outputs:
     - Stdout: {}
 ```
