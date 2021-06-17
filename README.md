@@ -8,7 +8,6 @@
 ### 支持的kafka对应参数
 参考: https://github.com/edenhill/librdkafka/blob/master/CONFIGURATION.md 
 
-- TLS 全部
 
 # 使用方法
 
