@@ -150,9 +150,13 @@ func (p *CkafkaInput) ReadOneEvent() map[string]interface{} {
 	event := p.decoder.Decode(message.Value)
 	if p.decorateEvents {
 		kafkaMeta := make(map[string]interface{})
-		kafkaMeta["topic"] = topicPartition.Topic
+		var topic string
+		if topicPartition.Topic != nil {
+			topic = *topicPartition.Topic
+		}
+		kafkaMeta["topic"] = topic
 		kafkaMeta["partition"] = topicPartition.Partition
-		kafkaMeta["offset"] = topicPartition.Offset
+		kafkaMeta["offset"] = int64(topicPartition.Offset)
 		event["@metadata"] = map[string]interface{}{"kafka": kafkaMeta}
 	}
 	return event
